@@ -1,4 +1,23 @@
-.Rproj.user
+# R/RStudio junk
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
+
+# Data (customize as needed)
+*.csv
+*.json
+*.RDS
+*.qs
+
+# Ignore outputs
+*.rds
+*.Rdata
+*.sav
+*.feather
+*.xlsx
+*.xls
+
+# Other OS crap
+.DS_Store
+Thumbs.db

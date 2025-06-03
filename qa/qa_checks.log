@@ -1,0 +1,95 @@
+
+############################################
+#
+# Quality Assurance Check
+#
+############################################
+
+[1] "To manually review edge cases that explain record count disparities, refer to the following folder:"
+[1] "https://github.com/reliablerascal/fl-legislation-etl/tree/main/qa"
+
+############################################
+#
+# Review processed dataframes for anomalies
+#
+############################################
+
+[1] "6121 roll calls in raw parsed data,"
+[1] "2222 of these with missing date or no votes"
+
+[1] "84660 legislator-votes in raw parsed data,"
+[1] "0 of these are tied to roll calls with no 'present' (aye or nay) votes from either party."
+
+############################################
+#
+# Review partisan_vote_type edge cases
+#
+############################################
+
+[1] "Of 84,660 legislator-votes in raw parsed data:"
+[1] "396 were categorized as 'Other.' Of these:"
+[1] "0 absent"
+[1] "0 no vote"
+[1] "356 undefined because legislator's own party split their vote equally"
+[1] "40 undefined because opposition party split their vote equally"
+[1] "0 unexplained"
+
+############################################
+#
+# Review assignment of incumbent legislators to districts
+#
+############################################
+
+[1] "91 legislators and 90 incumbent legislators in p_legislators."
+[1] "60 districts in p_districts, of which 60 have an incumbent legislator."
+
+############################################
+#
+# Review party loyalty rankings
+#
+############################################
+
+For party loyalty tiebreakers, legislators are ranked based on number of votes counted in party loyalty metric.
+To review all loyalty ranks, see qa_loyalty_ranks.csv. Here are the first five:
+  chamber party rank_partisan_leg_D rank_partisan_leg_R          legislator_name district_number leg_party_loyalty
+1   House     D                   1                  NA Stephanie Stahl Hamilton              21         0.9905882
+2   House     D                   2                  NA            Lorena Austin               9         0.9905660
+3   House     D                   3                  NA      Oscar De Los Santos              11         0.9901478
+4   House     D                   4                  NA             Brian Garcia               8         0.9893617
+5   House     D                   5                  NA          Nancy Gutierrez              18         0.9866962
+6   House     D                   6                  NA         Mariana Sandoval              23         0.9808511
+  leg_n_votes_denom_loyalty
+1                       425
+2                       424
+3                       406
+4                       470
+5                       451
+6                       470
+
+############################################
+#
+# Reconcile legislator vote counts
+#
+############################################
+
+[1] "84,660 legislator votes."
+[1] "84,630 legislator votes in calc_votes01_both_parties_present."
+[1] "84,630 legislator votes in calc_votes02_w_partisan_stats."
+[1] "84,630 legislator votes in calc_votes03_categorized."
+[1] "4 roll calls had no votes for one or both parties"
+[1] "This accounts for 30 legislator-votes removed, because they couldn't be weighted for partisan alignment."
+[1] "Including 0 legislator-votes removed, because neither party voted."
+[1] "See qa_rc_missing_party.csv to review those roll calls."
+
+############################################
+#
+# Reconcile roll call partisanship calculations
+#
+############################################
+
+[1] "6121 roll calls."
+[1] "7798 roll calls by party in calc_rc01_by_party. We'd expect two records per roll call, or 12242 records."
+[1] "4 records where no party members are present for a given roll call."
+[1] "See qa_rc_party_none_present.csv to review those records."
+
+[1] "3899 roll calls in calc_rc02_partisanship"
