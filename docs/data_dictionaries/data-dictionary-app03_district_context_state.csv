@@ -1,0 +1,13 @@
+field_name,description
+sum_white,Total state population identifying as White
+sum_hispanic,Total population identifying as Hispanic
+sum_black,Total population identifying as Black
+sum_asian,Total population identifying as Asian
+sum_pacific,Total population identifying as Pacific Islander
+sum_native,Total population identifying as Native American
+sum_total_demo,Total population in demographic dataset
+pct_white,Percent of state population that is White
+pct_hispanic,Percent that is Hispanic
+pct_black,Percent that is Black
+pct_asian,Percent that is Asian
+pct_napi,Percent that is Native American or Pacific Islander

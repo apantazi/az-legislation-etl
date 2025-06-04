@@ -1,0 +1,44 @@
+field_name,description
+people_id,LegiScan people ID for the legislator
+party,Party affiliation
+legislator_name,Full legislator name
+last_name,Surname
+ballotpedia,URL to Ballotpedia profile
+district_number,Legislative district number
+chamber,House or Senate
+termination_date,Date legislator left office (NA if active)
+setting_party_loyalty,Loyalty metric selected in app settings
+leg_party_loyalty,Average party loyalty score
+leg_n_votes_denom_loyalty,Number of votes used in loyalty calculation
+leg_n_votes_party_line_partisan,Count of partisan party-line votes
+leg_n_votes_party_line_bipartisan,Count of bipartisan party-line votes
+leg_n_votes_cross_party,Count of cross-party votes
+leg_n_votes_absent_nv,Count of absent or no-vote instances
+leg_n_votes_independent,Count of votes against both parties
+leg_n_votes_other,Other votes not categorized
+leg_party_independence,Mean share of "against both" votes
+rank_independent_all,Independence rank across chamber
+rank_independent_R,Independence rank among Republicans
+rank_independent_D,Independence rank among Democrats
+rank_partisan_leg_R,Party loyalty rank among Republicans
+rank_partisan_leg_D,Party loyalty rank among Democrats
+avg_pct_D,Weighted average percent Democratic vote in district elections
+avg_pct_R,Weighted average percent Republican vote in district elections
+avg_party_lean,Party with higher vote share in the district
+avg_party_lean_points_abs,Absolute point difference between parties
+avg_party_lean_points_R,Republican lead in percentage points
+n_white,Number of residents identifying as White
+n_hispanic,Number of residents identifying as Hispanic
+n_black,Number of residents identifying as Black
+n_asian,Number of residents identifying as Asian
+n_native,Number of residents identifying as Native American
+n_pacific,Number of residents identifying as Pacific Islander
+n_total_demo,Total residents in demographic dataset
+pct_white,Percent of White residents
+pct_hispanic,Percent of Hispanic residents
+pct_black,Percent of Black residents
+pct_asian,Percent of Asian residents
+pct_napi,Percent of Native American or Pacific Islander residents
+rank_partisan_dist_R,Rank of district partisanship among Republicans
+rank_partisan_dist_D,Rank of district partisanship among Democrats
+incumb_people_id,People ID for the district's incumbent
