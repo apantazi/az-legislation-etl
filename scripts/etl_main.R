@@ -55,6 +55,7 @@ source("03z_process_load.R")
 #ETL for app layer
 source("04a_app_settings.R") # integrate app settings into creating base query layer
 source("04b_app_prep.R") # merge, prep, analyze data
+source("04c_app_bill_lookup.R") # build bill lookup dataset
 
 # check data quality and write to log file
 qa_log <- "../qa/qa_checks.log"
