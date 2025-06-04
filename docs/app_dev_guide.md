@@ -42,6 +42,8 @@ Data already incorporated in this data pipeline supports a new app which compare
 Data supporting this app:
 * [app03_district_context.csv](../data-app/app03_district_context.csv)
 * [app03_district_context_state.csv](../data-app/app03_district_context_state.csv)
+* [app04_bill_lookup.csv](../data-app/app04_bill_lookup.csv)
+
 
 <!---
 >See [Data Dictionary for app03_district_context](docs/data-dictionary-app03_district_context.csv) and [Data Dictionary for  app03_district_context_state](docs/data-dictionary-app03_district_context_state.csv).

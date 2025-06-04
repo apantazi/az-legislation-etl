@@ -5,7 +5,6 @@
 .Ruserdata
 
 # Data (customize as needed)
-*.csv
 *.json
 *.RDS
 *.qs

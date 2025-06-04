@@ -44,7 +44,8 @@ list_tables <- c(
   "app01_vote_patterns",
   "app02_leg_activity",
   "app03_district_context",
-  "app03_district_context_state"
+  "app03_district_context_state",
+  "app04_bill_lookup"
   # "viz_partisanship",
   # "viz_partisan_senate_d",
   # "viz_partisan_senate_r"
@@ -74,6 +75,7 @@ list_export_df <- list(
   app02_leg_activity = app02_leg_activity,
   app03_district_context = app03_district_context,
   app03_district_context_state = app03_district_context_state,
+  app04_bill_lookup = app04_bill_lookup,
   calc_elections_weighted = calc_elections_weighted,
   qry_bills = qry_bills,
   qry_leg_votes = qry_leg_votes,
