@@ -1,0 +1,35 @@
+field_name,description
+roll_call_id,Unique identifier for the roll call
+legislator_name,Full name of the legislator
+last_name,Surname of the legislator
+chamber,Legislative chamber (House or Senate)
+people_id,LegiScan people ID for the legislator
+partisan_vote_type,Classification of vote loyalty
+session_year,Legislative session year
+final_vote,Outcome of the vote for the bill
+party,Legislator party affiliation
+bill_number,Official bill number
+roll_call_desc,Description of the roll call
+bill_title,Short title of the bill
+roll_call_date,Date of the roll call
+bill_desc,Short description of the bill
+bill_url,Link to the bill text on LegiScan
+pct_of_total,Share of total votes cast
+pct_of_present,Share of votes by those present
+vote_text,Recorded vote (Yea/Nay)
+bill_id,LegiScan bill identifier
+district_number,Legislator district number
+D_pct_of_present,Percent of Democrats voting on the roll call
+R_pct_of_present,Percent of Republicans voting on the roll call
+ballotpedia,URL to Ballotpedia page for the legislator
+rank_partisan_leg_D,Party loyalty rank among Democrats
+rank_partisan_leg_R,Party loyalty rank among Republicans
+leg_party_loyalty,Average party loyalty score for the legislator
+rc_mean_partisanship,Average partisanship of the roll call
+rc_unity_R,Share of Republicans voting together
+rc_unity_D,Share of Democrats voting together
+is_include_d,Flag for displaying in Democratic view
+is_include_r,Flag for displaying in Republican view
+rank_partisan_dist_R,Partisan rank of the district among Republicans
+rank_partisan_dist_D,Partisan rank of the district among Democrats
+partisan_vote_plot,Numeric encoding for plotting
