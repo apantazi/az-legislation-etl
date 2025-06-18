@@ -1,4 +1,4 @@
-# REQUEST-API-LEGISCAN.R
+# 01_REQUEST_API_LEGISCAN.R
 # This module requests any arizona datasets accessible from LegiScan via API that haven't already been retrieved
 
 library(legiscanrr) # Interface with the LegiScan API for accessing legislative data / devtools::install_github("fanghuiz/legiscanrr")

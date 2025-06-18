@@ -1,4 +1,4 @@
-# READ_CSVS.R
+# 02b_raw_read_csvs.R
 # 7/6/24 RR
 # this script retrieves user-entered data and reads downloaded csvs
 

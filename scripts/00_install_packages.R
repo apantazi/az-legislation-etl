@@ -1,5 +1,5 @@
-# INSTALL-PACKAGES.R
-# 6/11/24
+# 00_install_packages.R
+# 6/17/25
 # only need to run this once for initial R setup on my local computer
 # may need to recreate as a requirements file once pushing this database onto Azure
 

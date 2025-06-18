@@ -1,11 +1,11 @@
 ################################
 #                              #  
-# 02_parse_legiscan.R          #
+# 02a_raw_parse_legiscan.R          #
 #                              #
 ################################
 # parses JSON data requested from LegiScan
 # adapted from code originally written by Andrew Pantazi
-# June 2024
+# June 2025
 
 ################################
 #                              #  
@@ -110,8 +110,46 @@ extract_bill <- function(input_bill_path, pb) {
     status_date = safe_get(bill$status_date)
   )
   
+  bill_texts <- lapply(bill$texts, function(text) {
+    data.frame(
+      doc_id = text$doc_id,
+      bill_id = bill$bill_id,
+      date = text$date,
+      type = text$type,
+      url = text$url,
+      stringsAsFactors = FALSE
+    )
+  })
+  
   return (list(meta = bill_meta))
 }
+
+# Example logic after parsing all bills
+t_bill_texts <- bind_rows(
+  lapply(text_paths_bills, function(bill_file) {
+    bill_data <- jsonlite::fromJSON(bill_file, simplifyVector = FALSE)
+    bill_id <- bill_data$bill$bill_id
+    texts <- bill_data$bill$texts
+    if (is.null(texts) || length(texts) == 0) return(NULL)
+    
+    # if it's not a list (i.e., only one text), wrap in a list
+    if (!is.list(texts) || !is.null(names(texts))) {
+      texts <- list(texts)
+    }
+    
+    map_dfr(texts, function(txt) {
+      # Defensive: ensure these fields exist
+      data.frame(
+        doc_id = txt$doc_id %||% NA,
+        bill_id = bill_id,
+        date = txt$date %||% NA,
+        type = txt$type %||% NA,
+        url = txt$url %||% NA,
+        stringsAsFactors = FALSE
+      )
+    })
+  })
+)
 
 
 

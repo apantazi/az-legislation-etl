@@ -1,4 +1,4 @@
-# WRITE-TO-POSTGRES.R
+# 04z_app_load.R
 # 6/11/24 RR
 # This script takes data that's already been extracted and transformed from LegiScan and other sources
 # and writes it into the Postgres database fl_leg_votes
